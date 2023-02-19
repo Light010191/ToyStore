@@ -1,0 +1,16 @@
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\ToyStore.exe.config
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\ToyStore.exe
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\ToyStore.pdb
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\EntityFramework.dll
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\EntityFramework.SqlServer.dll
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\EntityFramework.xml
+E:\проэкты\С#\23.01\ToyStore\ToyStore\bin\Debug\EntityFramework.SqlServer.xml
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.AssemblyReference.cache
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.SuggestedBindingRedirects.cache
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Properties.Resources.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.GenerateResource.cache
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CoreCompileInputs.cache
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CopyComplete
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.exe
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.pdb
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.InitialCreate.resources
