@@ -15,7 +15,7 @@ namespace ToyStore.Model
         public DateTime DateRelease { get; set; }
         public int Amount { get; set; }
         public Company Company { get; set; }
-        public AgeOfChildren Age { get; set; }
+        public string AgeOfChildren { get; set; }
         public ICollection<SalesJournal> SalesJournals { get; set;}
     }
 }

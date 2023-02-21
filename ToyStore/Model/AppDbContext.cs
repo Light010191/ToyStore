@@ -16,8 +16,7 @@ namespace ToyStore.Model
         public DbSet<Client> Clients { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Toy> Toys { get; set; }
-        public DbSet<SalesJournal> SalesJournals { get; set;}
-        public DbSet<AgeOfChildren> AgeOfChildren { get; set;}
+        public DbSet<SalesJournal> SalesJournals { get; set;}       
         public DbSet<Company> Companys { get; set; }        
     }
 }

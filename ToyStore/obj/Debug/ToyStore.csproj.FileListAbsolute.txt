@@ -14,3 +14,7 @@ E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.csproj.CopyComp
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.exe
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.pdb
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.InitialCreate.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.AdminForm.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.MainForm.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.RegistrationForm.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.updateToy.resources
