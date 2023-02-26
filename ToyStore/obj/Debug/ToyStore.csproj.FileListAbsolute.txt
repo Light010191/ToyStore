@@ -17,4 +17,7 @@ E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.Init
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.AdminForm.resources
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.MainForm.resources
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.RegistrationForm.resources
-E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.updateToy.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.updateServices.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.ClientForm.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.updateSale.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.updateSale2.resources

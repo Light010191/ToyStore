@@ -8,10 +8,9 @@ namespace ToyStore.Model
 {
     public class SalesJournal
     {
-        public int Id { get; set; }
-        public int Toy_Fk { get; set; }
+        public int Id { get; set; }        
         public DateTime DateSale { get; set; }
         public int Amount { get; set; }
-        public ICollection<Toy> Toys { get; set; }
+        public Toy Toy { get; set; }
     }
 }

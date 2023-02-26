@@ -9,7 +9,7 @@ namespace ToyStore.Controller
 {
     public interface IService
     {
-        Task AddObject();
+        Task<IUser> AddObject(IUser user);
         Task GetObject();
         Task<bool> RemoveObject(int id);
     }

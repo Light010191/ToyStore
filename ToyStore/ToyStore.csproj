@@ -59,6 +59,7 @@
     <Compile Include="Controller\ClientService.cs" />
     <Compile Include="Controller\CompanyService.cs" />
     <Compile Include="Controller\IService.cs" />
+    <Compile Include="Controller\IUser.cs" />
     <Compile Include="Controller\SaleService.cs" />
     <Compile Include="Controller\ToyService.cs" />
     <Compile Include="Form1.cs">
@@ -71,9 +72,17 @@
     <Compile Include="Migrations\202302191212133_InitialCreate.designer.cs">
       <DependentUpon>202302191212133_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302212116420_updateToy.cs" />
-    <Compile Include="Migrations\202302212116420_updateToy.designer.cs">
-      <DependentUpon>202302212116420_updateToy.cs</DependentUpon>
+    <Compile Include="Migrations\202302251435466_updateServices.cs" />
+    <Compile Include="Migrations\202302251435466_updateServices.designer.cs">
+      <DependentUpon>202302251435466_updateServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302261258517_updateSale.cs" />
+    <Compile Include="Migrations\202302261258517_updateSale.designer.cs">
+      <DependentUpon>202302261258517_updateSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302261301214_updateSale2.cs" />
+    <Compile Include="Migrations\202302261301214_updateSale2.designer.cs">
+      <DependentUpon>202302261301214_updateSale2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AppDbContext.cs" />
@@ -90,6 +99,12 @@
     <Compile Include="View\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +120,14 @@
     <EmbeddedResource Include="Migrations\202302191212133_InitialCreate.resx">
       <DependentUpon>202302191212133_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302212116420_updateToy.resx">
-      <DependentUpon>202302212116420_updateToy.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202302251435466_updateServices.resx">
+      <DependentUpon>202302251435466_updateServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302261258517_updateSale.resx">
+      <DependentUpon>202302261258517_updateSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302261301214_updateSale2.resx">
+      <DependentUpon>202302261301214_updateSale2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +140,9 @@
     </Compile>
     <EmbeddedResource Include="View\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

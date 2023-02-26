@@ -17,5 +17,9 @@ namespace ToyStore.Model
         public Company Company { get; set; }
         public string AgeOfChildren { get; set; }
         public ICollection<SalesJournal> SalesJournals { get; set;}
+        public override string ToString()
+        {
+            return $"Name:{Name} Weight:{Weight} AgeOfChildren:{AgeOfChildren} Price:{Price} Amount:{Amount}";
+        }
     }
 }

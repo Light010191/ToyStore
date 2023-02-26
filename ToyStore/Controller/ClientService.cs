@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using ToyStore.Model;
 
 namespace ToyStore.Controller
 {
-    public class ClientService : IService
+    public class ClientService
     {
         public readonly AppDbContext _context;
         public ClientService()
@@ -20,16 +21,19 @@ namespace ToyStore.Controller
             static ClientServiceCreate() { }
             internal static readonly ClientService instance= new ClientService();
         }
-        public Task AddObject()
+        public async Task<IUser> AddObject(IUser user)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task GetObject()
+            Client newClient = (Client)user;
+            _context.Clients.Add(newClient);
+            await _context.SaveChangesAsync();
+            return newClient;
+        } 
+       
+        public async Task<bool> LogIn(string login,string password) 
         {
-            throw new NotImplementedException();
+            var res =await _context.Clients.FirstOrDefaultAsync(c => c.Login == login && c.Password == password);
+            return res!=null;
         }
-
         public Task<bool> RemoveObject(int id)
         {
             throw new NotImplementedException();
