@@ -22,22 +22,24 @@ namespace ToyStore.Controller
             internal static readonly SaleService instance = new SaleService();
         }
 
-        public async Task<SalesJournal> AddSale(SalesJournal newSale)
+        public async Task<Sales> AddSale(Sales newSale,int toyId)
         {
-            _context.SalesJournals.Add(newSale);
+            _context.Sales.Add(newSale);
             await _context.SaveChangesAsync();
             return newSale;
         }
-
-        public async Task<SalesJournal> GetObject(int id)
+        public async Task<List<Sales>> GetAllSales()
         {
-            var sale = await _context.SalesJournals.FirstOrDefaultAsync(s=>s.Id== id);
+            var list = _context.Sales.Include("Toy").Include("Toy.Company").ToList();            
+            return list;
+        }
+
+        public async Task<Sales> GetObject(int id)
+        {
+            var sale = await _context.Sales.FirstOrDefaultAsync(s=>s.Id== id);
             return sale;
         }
 
-        public Task<bool> RemoveObject(int id)
-        {
-            throw new NotImplementedException();
-        }       
+            
     }
 }

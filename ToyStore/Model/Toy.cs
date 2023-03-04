@@ -15,11 +15,11 @@ namespace ToyStore.Model
         public DateTime DateRelease { get; set; }
         public int Amount { get; set; }
         public Company Company { get; set; }
-        public string AgeOfChildren { get; set; }
-        public ICollection<SalesJournal> SalesJournals { get; set;}
+        public string AgeOfChildrens { get; set; }
+        public ICollection<Sales> Sales { get; set;}
         public override string ToString()
         {
-            return $"Name:{Name} Weight:{Weight} AgeOfChildren:{AgeOfChildren} Price:{Price} Amount:{Amount}";
+            return $"Name:{Name} Weight:{Weight} Age:{AgeOfChildrens} Company:{Company} Price:{Price} Amount:{Amount}";
         }
     }
 }

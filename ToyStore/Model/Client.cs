@@ -7,7 +7,7 @@ using ToyStore.Controller;
 
 namespace ToyStore.Model
 {
-    public class Client :IUser
+    public class Client 
     {
         public int Id { get; set; }
         public string Name { get; set; }

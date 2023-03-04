@@ -13,9 +13,7 @@ using ToyStore.Model;
 namespace ToyStore.View
 {
     public partial class MainForm : Form
-    {
-        RegistrationForm registration;
-        AdminForm admin;
+    {             
         ClientService clientService = ClientService.Instanse;
         public MainForm()
         {
@@ -24,7 +22,7 @@ namespace ToyStore.View
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            registration = new RegistrationForm();
+            RegistrationForm registration = new RegistrationForm();
             this.Visible = false;
             if (registration.ShowDialog() == DialogResult.OK)
             {
@@ -35,9 +33,9 @@ namespace ToyStore.View
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            admin = new AdminForm();
+            LogInAdminForm logInAdmin= new LogInAdminForm();
             this.Visible = false;
-            if (admin.ShowDialog() == DialogResult.OK)
+            if (logInAdmin.ShowDialog() == DialogResult.OK)
             {
 
             }
@@ -46,11 +44,16 @@ namespace ToyStore.View
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             if (await clientService.LogIn(textBox1.Text,textBox2.Text)==true)
             {
                 new ClientForm().ShowDialog();
             }
-            else MessageBox.Show("no");
+            else MessageBox.Show("Try again");
+            textBox1.Text = "";
+            textBox2.Text = "";
+            this.Visible = true;
+            
         }
     }
 }

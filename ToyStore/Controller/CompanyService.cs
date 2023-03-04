@@ -30,7 +30,7 @@ namespace ToyStore.Controller
         }
         public async Task<bool> UpdateObject(Company company)
         {
-            var selectedCompany = await _context.Companys.FirstOrDefaultAsync(c => c.Id == company.Id);
+            var selectedCompany = await _context.Companys.Include("Toys").FirstOrDefaultAsync(c => c.Id == company.Id);
             if (selectedCompany == null) return false;
             selectedCompany.Name = company.Name;
             selectedCompany.Country = company.Country;
@@ -41,20 +41,13 @@ namespace ToyStore.Controller
         }
         public async Task<Company> GetCompany(int companyId)
         {
-            var res = await _context.Companys.FirstOrDefaultAsync(c=> c.Id == companyId);            
+            var res = await _context.Companys.Include("Toys").FirstOrDefaultAsync(c=> c.Id == companyId);            
             return res;
         }
         public async Task<List<Company>> GetAllCompanys()
         {            
-            var list = _context.Companys.ToList();            
-            return list;
-        }
-
-        public Task<bool> RemoveObject(int id)
-        {
-            throw new NotImplementedException();
-        }              
-
-       
+            var list = await _context.Companys.Include("Toys").Include("Toys.Company").ToListAsync();            
+            return list;            
+        }        
     }
 }

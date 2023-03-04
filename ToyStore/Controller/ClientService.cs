@@ -21,9 +21,8 @@ namespace ToyStore.Controller
             static ClientServiceCreate() { }
             internal static readonly ClientService instance= new ClientService();
         }
-        public async Task<IUser> AddObject(IUser user)
-        {
-            Client newClient = (Client)user;
+        public async Task<Client> AddObject(Client newClient)
+        {            
             _context.Clients.Add(newClient);
             await _context.SaveChangesAsync();
             return newClient;
@@ -33,10 +32,6 @@ namespace ToyStore.Controller
         {
             var res =await _context.Clients.FirstOrDefaultAsync(c => c.Login == login && c.Password == password);
             return res!=null;
-        }
-        public Task<bool> RemoveObject(int id)
-        {
-            throw new NotImplementedException();
-        }
+        }        
     }
 }

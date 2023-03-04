@@ -15,40 +15,50 @@ namespace ToyStore.View
     public partial class AdminForm : Form
     {
         CompanyService companyService = CompanyService.Instance;
-        ToyService toyService = ToyService.Instance;        
+        ToyService toyService = ToyService.Instance; 
+        SaleService saleService = SaleService.Instance;
         public AdminForm()
         {
             InitializeComponent();
-            this.Load += AdminForm_Load; 
+            this.Load += AdminForm_Load;
+            listBox1.SelectedIndexChanged += ListBox1_SelectedIndexChanged;
+        }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listBox3.Items.Clear();
+            Company selectedCompany = listBox1.SelectedItem as Company;
+            selectedCompany.Toys.ToList().ForEach(t=>listBox3.Items.Add(t));
         }
 
         private async void AdminForm_Load(object sender, EventArgs e)
-        {
-            UpdateToysForm();
-            UpdateCompanysForm();
+        {           
+            UpdateForm();
+            var sales =await saleService.GetAllSales();
+            sales.ForEach(s=>listBox4.Items.Add(s));
         }        
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            if (!IsCheckedTextbox()) return;
+            if (!IsCheckedTextboxCompanys()) return;
             await companyService.AddObject(new Company
             {
                 Name = textBox1.Text,
                 Country = textBox2.Text,
                 Email = textBox3.Text
             });
-            UpdateCompanysForm();
+            UpdateForm();
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if (!IsCheckedTextbox()) return;
+            if (!IsCheckedTextboxCompanys()) return;
             Company updateCompany = listBox1.SelectedItem as Company;
             updateCompany.Name = textBox1.Text;
             updateCompany.Country = textBox2.Text;
             updateCompany.Email = textBox3.Text;            
             await companyService.UpdateObject(updateCompany);
-            UpdateCompanysForm();
+            UpdateForm();
         }
 
         private async void button3_Click(object sender, EventArgs e)
@@ -60,38 +70,32 @@ namespace ToyStore.View
                 Weight = (double)numericUpDown1.Value,
                 Price = numericUpDown2.Value,
                 DateRelease = dateTimePicker1.Value.Date,
-                AgeOfChildren = comboBox3.SelectedItem.ToString(),
-                Company = company,
+                AgeOfChildrens = comboBox3.SelectedItem.ToString(),
                 Amount = (int)numericUpDown3.Value
-            }) ;
-            UpdateToysForm();
+            },company.Id) ;
+            UpdateForm();
         }
 
         private async void button4_Click(object sender, EventArgs e)
         {
             var toy = listBox2.SelectedItem as Toy;
             if(toy == null) return;
-            await toyService.UpdateAmountToy(toy,(int)numericUpDown4.Value);
-            UpdateToysForm();
-        }
-        private async void UpdateCompanysForm()
-        {
-            listBox1.Items.Clear(); 
-            var companys = await companyService.GetAllCompanys();
-            companys.ForEach(c => listBox1.Items.Add(c));            
-        }
-        private async void UpdateToysForm()
+            await toyService.AdditionAmountToy(toy,(int)numericUpDown4.Value);
+            UpdateForm();
+        }       
+        private async void UpdateForm()
         {            
             comboBox2.Items.Clear();
             listBox2.Items.Clear();
+            listBox1.Items.Clear();
 
             var companys = await companyService.GetAllCompanys();
-            companys.ForEach(c =>  comboBox2.Items.Add(c));
+            companys.ForEach(c => { listBox1.Items.Add(c); comboBox2.Items.Add(c);});                       
 
             var toys = await toyService.GetAllToys();
             toys.ForEach(t => listBox2.Items.Add(t));
         }
-        private bool IsCheckedTextbox()
+        private bool IsCheckedTextboxCompanys()
         {
             if(string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text) ||
                 string.IsNullOrEmpty(textBox3.Text)) return false;
