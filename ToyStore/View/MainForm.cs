@@ -55,5 +55,16 @@ namespace ToyStore.View
             this.Visible = true;
             
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            StudyForm studyForm = new StudyForm();
+            this.Visible = false;
+            if (studyForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            this.Visible = true;
+        }
     }
 }

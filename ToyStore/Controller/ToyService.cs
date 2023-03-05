@@ -57,7 +57,7 @@ namespace ToyStore.Controller
         }
         public async Task<bool> SubtractionAmountToy(int toyId, int amount)
         {
-            var selectedToy = _context.Toys.FirstOrDefault(t => t.Id == toyId);
+            var selectedToy = await _context.Toys.FirstOrDefaultAsync(t => t.Id == toyId);
             if (selectedToy == null) return false;
             selectedToy.Amount -= amount;
             await _context.SaveChangesAsync();

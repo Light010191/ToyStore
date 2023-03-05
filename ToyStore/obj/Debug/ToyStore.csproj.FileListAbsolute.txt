@@ -19,3 +19,5 @@ E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.Registrati
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.ClientForm.resources
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.LogInAdminForm.resources
 E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.update1.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.View.StudyForm.resources
+E:\проэкты\С#\23.01\ToyStore\ToyStore\obj\Debug\ToyStore.Migrations.update2.resources

@@ -22,6 +22,7 @@ namespace ToyStore.View
             InitializeComponent();
             this.Load += AdminForm_Load;
             listBox1.SelectedIndexChanged += ListBox1_SelectedIndexChanged;
+            dateTimePicker1.MaxDate=DateTime.Now;
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace ToyStore.Controller
             internal static readonly SaleService instance = new SaleService();
         }
 
-        public async Task<Sales> AddSale(Sales newSale,int toyId)
+        public async Task<Sales> AddSale(Sales newSale)
         {
             _context.Sales.Add(newSale);
             await _context.SaveChangesAsync();
@@ -30,7 +30,7 @@ namespace ToyStore.Controller
         }
         public async Task<List<Sales>> GetAllSales()
         {
-            var list = _context.Sales.Include("Toy").Include("Toy.Company").ToList();            
+            var list = _context.Sales.ToList();            
             return list;
         }
 

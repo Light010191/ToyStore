@@ -19,7 +19,7 @@ namespace ToyStore.Model
         public ICollection<Sales> Sales { get; set;}
         public override string ToString()
         {
-            return $"Name:{Name} Weight:{Weight} Age:{AgeOfChildrens} Company:{Company} Price:{Price} Amount:{Amount}";
+            return $"Name:{Name} Weight:{Weight} Age:{AgeOfChildrens} Company:{Company} Price:{Price} Amount:{Amount} dor{DateRelease.Date}";
         }
     }
 }
